@@ -35,10 +35,6 @@ before_script:
   # - git config --global user.email "user@example.com"
   # - git config --global user.name "User name"
 
-Test SSH:
+Update NGINX:
     script:
-        - ssh root@git.developernexus.app 'cd /etc/nginx && git pull'
-        - ssh root@git.developernexus.app 'if [[ $(nginx -t &> /dev/null) -eq 0 ]]; then systemctl restart nginx; else echo "Failed"; fi'
-        - echo $PWD
-
-
+        - ssh root@git.developernexus.app 'bash -s' < script.sh
