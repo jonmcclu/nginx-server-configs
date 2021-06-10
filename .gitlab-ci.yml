@@ -37,9 +37,8 @@ before_script:
 
 Test SSH:
     script:
-        - ssh root@git.developernexus.app << EOF
-        - cd /etc/nginx && git pull
-        - if [[ $(nginx -t &> /dev/null) -eq 0 ]]; then systemctl restart nginx; else echo "Failed"; fi
-        - EOF
+        - ssh root@git.developernexus.app 'cd /etc/nginx && git pull'
+        - ssh root@git.developernexus.app 'if [[ $(nginx -t &> /dev/null) -eq 0 ]]; then systemctl restart nginx; else echo "Failed"; fi'
+        - echo $PWD
 
 
