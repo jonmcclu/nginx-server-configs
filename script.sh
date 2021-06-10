@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+cd /etc/nginx && git pull
+
 if nginx -t &> /dev/null
 then
         echo "Successfull"
