@@ -1,5 +1,6 @@
 #!/bin/env bash
 
+chmod -R 777 /etc/nginx/**
 cd /etc/nginx && git pull
 
 if nginx -t &> /dev/null
