@@ -37,4 +37,5 @@ before_script:
 
 Update NGINX:
     script:
+        - echo $PWD
         - ssh root@git.developernexus.app 'bash -s' < script.sh
