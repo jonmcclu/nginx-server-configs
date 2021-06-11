@@ -16,10 +16,5 @@ proxy_set_header X-Plex-Model $http_x_plex_model;
     proxy_set_header        Referer                   $server_addr;
     proxy_set_header        Origin                    $server_addr;
 
-#Websockets
-proxy_http_version 1.1;
-proxy_set_header Upgrade $http_upgrade;
-proxy_set_header Connection "upgrade";
-
 proxy_redirect off;
 proxy_buffering off;
