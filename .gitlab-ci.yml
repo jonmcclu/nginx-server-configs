@@ -38,4 +38,4 @@ before_script:
 Update NGINX:
     script:
         - echo $PWD
-        - ssh root@git.developernexus.app 'bash -s' < script.sh
+        - ssh root@loveislove.developernexus.app 'bash -s' < script.sh
